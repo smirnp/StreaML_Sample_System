@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+@prefix gerbil: <http://w3id.org/gerbil/vocab#> .
+@prefix hobbit: <http://w3id.org/hobbit/vocab#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<http://project-hobbit.eu/sml-v1-example-system>	a	hobbit:SystemInstance;
+    rdfs:label	"SML v1 example system"@en;
+	rdfs:comment "git.project-hobbit.eu:4567/smirnp/sml-v1-example-system/system-adapter"@en;
+	hobbit:implementsAPI <http://project-hobbit.eu/sml-benchmark-v1/API>;
+	hobbit:implementsAPI <http://www.example.org/exampleBenchmark/debsAPI>;
+	hobbit:imageName "git.project-hobbit.eu:4567/smirnp/sml-v1-example-system/system-adapter".
