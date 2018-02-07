@@ -8,11 +8,13 @@ Finally the docker image of the system may be uploaded into the [HOBBIT online p
 
 # Usage
 ## Before you start
-1) Make sure that docker (v17 and later) is installed (or install it by `sudo curl -sSL https://get.docker.com/ | sh`)
-2) Make sure that maven (v3 and later) is installed (or install it by `sudo apt-get install maven`)
-3) Clone this repository (`git clone https://github.com/smirnp/StreaML_Sample_System.git`)
-4) Open the cloned repository in any IDE you like. 
-5) Make sure that hobbit-java-sdk dependency (declared in [pom.xml](https://github.com/hobbit-project/java-sdk-example/blob/master/pom.xml)) is installed into your local maven repository (or install it by executing the `mvn validate` command)
+1) Make sure that Oracle Java 1.8 (or higher) is installed (`java -version`). Or install it by the `sudo add-apt-repository ppa:webupd8team/java && sudo apt-get update && sudo apt-get install oracle-java8-installer -y`.
+2) Make sure that docker (v17 and later) is installed (or install it by `sudo curl -sSL https://get.docker.com/ | sh`)
+3) Make sure that maven (v3 and later) is installed (or install it by `sudo apt-get install maven`)
+4) Add the `127.0.0.1 rabbit` line to `/etc/hosts` (Linux) or `C:\Windows\System32\drivers\etc\hosts` (Windows)
+5) Clone this repository (`git clone https://github.com/smirnp/StreaML_Sample_System.git`)
+6) Open the cloned repository in any IDE you like. 
+7) Make sure that hobbit-java-sdk dependency (declared in [pom.xml](https://github.com/hobbit-project/java-sdk-example/blob/master/pom.xml)) is installed into your local maven repository (or install it by executing the `mvn validate` command)
 
 ## How to create a system for existing benchmark
 1) Find the `SystemAdapter.java` and use it as a basic HOBBIT-compatible implementation of your future system. Run the `checkHealth()` method from the `StreaMLSystemTest.java` to test/debug your system as pure java code. More details about the design of HOBBIT-compatible system adapters can be found [here](https://github.com/hobbit-project/platform/wiki/Develop-a-system-adapter-in-Java) and [here](https://github.com/hobbit-project/platform/wiki/Develop-a-system-adapter).
